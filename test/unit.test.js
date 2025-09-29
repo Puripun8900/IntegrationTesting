@@ -1,13 +1,15 @@
-const { expect } = require("chai");
-const { hexToRgb } = require("../src/server");
+const hexToRgb = require('../src/hexToRgb'); // Now points to the new file
 
-describe("Unit Test: hexToRgb()", () => {
-  it("should convert hex to rgb correctly", () => {
-    expect(hexToRgb("#ff0000")).to.deep.equal({ r: 255, g: 0, b: 0 });
-    expect(hexToRgb("00ff00")).to.deep.equal({ r: 0, g: 255, b: 0 });
+describe('Hex to RGB Conversion - Unit Tests', () => {
+  test('Converts #FF5733 to {r:255, g:87, b:51}', () => {
+    expect(hexToRgb('FF5733')).toEqual({ r: 255, g: 87, b: 51 });
   });
 
-  it("should throw error on invalid hex", () => {
-    expect(() => hexToRgb("xyz")).to.throw("Invalid hex color format");
+  test('Throws error for invalid hex "ZZZZZZ"', () => {
+    expect(() => hexToRgb('ZZZZZZ')).toThrow('Invalid HEX color.');
+  });
+
+  test('Handles hex with # prefix "#00FF00"', () => {
+    expect(hexToRgb('#00FF00')).toEqual({ r: 0, g: 255, b: 0 });
   });
 });
