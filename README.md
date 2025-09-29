@@ -1,64 +1,57 @@
-# Hex to RGB Converter API
+Hex to RGB Converter API
 
-# Description:
-# A simple RESTful API using Express.js that converts hex codes (e.g., #FF5733) to RGB.
-# Demonstrates API routes, unit tests, integration tests, and test documentation.
+Convert hexadecimal color codes (e.g., #FF5733) to RGB using Express.js. Includes unit tests, integration tests, and instructions for manual testing.
 
-# ==========================
-# SETUP
-# ==========================
+Setup
 
-# Clone the repository
+Clone the repository:
+
 git clone https://github.com/Puripun8900/IntegrationTesting.git
+
 cd IntegrationTesting
 
-# Install dependencies
+Install dependencies:
+
 npm install
 
-# Start the API server
+Run the API server:
+
 npm start
-# Server runs on a port (usually 3000)
 
-# ==========================
-# API USAGE
-# ==========================
+API Endpoint
 
-# Endpoint: GET /hex-to-rgb/:hex
-# Example using curl:
-curl http://localhost:3000/hex-to-rgb/#FF5733
+GET /hex-to-rgb/:hex
 
-# ==========================
-# TESTING
-# ==========================
+hex → hexadecimal color code (e.g., #FF5733)
 
-# Unit tests (hex-to-RGB function)
-npm test
+200 OK → returns { r, g, b }
 
-# Integration tests (API route)
-npm run test:integration
+400 Bad Request → invalid input
 
-# Manual testing (Postman or REST Client)
-# - Test GET /hex-to-rgb/:hex with multiple hex codes
-# - Take screenshots for documentation
+Example test: curl http://localhost:3000/hex-to-rgb/#FF5733
 
-# ==========================
-# PROJECT STRUCTURE
-# ==========================
+You can also test using Postman or REST Client.
 
-# src/       → API routes and logic
-# tests/     → unit and integration tests
-# .gitignore → ignores node_modules, .env, .DS_Store
+Testing
 
-# ==========================
-# NOTES
-# ==========================
+Unit tests: npm test
 
-# - Only valid hex codes are accepted; invalid codes return errors
-# - Code includes comments for clarity
-# - Tests are reproducible on any machine with Node.js
+Integration tests: npm run test:integration
 
-# ==========================
-# LICENSE
-# ==========================
+Manual tests: Send requests to /hex-to-rgb/:hex in Postman and take screenshots for documentation.
 
-# MIT License
+Project Structure
+
+src/ → API routes and logic
+tests/ → unit & integration tests
+.gitignore → ignores node_modules, .env, .DS_Store
+
+Notes
+
+Only valid hex codes are accepted.
+Code contains comments for clarity.
+Tests run on any machine with Node.js installed.
+
+License
+
+MIT License
