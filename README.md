@@ -11,7 +11,7 @@ This project is a simple RESTful API built with Express.js that converts hexadec
 ```bash
 git clone https://github.com/Puripun8900/IntegrationTesting.git
 cd IntegrationTesting
-2. Install Dependencies
+###2. Install Dependencies
 npm install
 
 3. Run the API
