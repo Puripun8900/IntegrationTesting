@@ -2,7 +2,7 @@
 
 ## Setup
 ```bash
-git clone (https://github.com/Puripun8900/IntegrationTesting)
+git clone https://github.com/Puripun8900/IntegrationTesting
 cd IntegrationTesting
 npm install
 
